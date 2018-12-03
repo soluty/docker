@@ -1,5 +1,5 @@
 MinDoc_New:
-  image: registry.cn-hangzhou.aliyuncs.com/mindoc/mindoc:v0.13
+  image: registry.cn-hangzhou.aliyuncs.com/mindoc/mindoc:v1.0
   privileged: false
   restart: always
   ports:
@@ -15,6 +15,3 @@ MinDoc_New:
     # - MINDOC_CACHE_PROVIDER=file
     - MINDOC_ENABLE_EXPORT=false
     - MINDOC_BASE_URL=http://soluty.xyz
-    - MINDOC_CDN_IMG_URL=
-    - MINDOC_CDN_CSS_URL=
-    - MINDOC_CDN_JS_URL=
