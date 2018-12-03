@@ -1,0 +1,21 @@
+MinDoc_New:
+  image: registry.cn-hangzhou.aliyuncs.com/mindoc/mindoc:v0.13
+  privileged: false
+  restart: always
+  ports:
+    - 8181:8181
+  volumes:
+    - /data/mindoc/database:/mindoc/database
+    - /data/mindoc/uploads:/mindoc/uploads
+    - /data/mindoc/db/mindoc.db:/mindoc/database/mindoc.db
+  environment:
+    - MINDOC_RUN_MODE=prod
+    - MINDOC_DB_ADAPTER=sqlite3
+    - MINDOC_DB_DATABASE=./database/mindoc.db
+    - MINDOC_CACHE=true
+    - MINDOC_CACHE_PROVIDER=file
+    - MINDOC_ENABLE_EXPORT=false
+    - MINDOC_BASE_URL=
+    - MINDOC_CDN_IMG_URL=
+    - MINDOC_CDN_CSS_URL=
+    - MINDOC_CDN_JS_URL=
