@@ -7,10 +7,11 @@ MinDoc_New:
   volumes:
     - /data/mindoc/database:/mindoc/database
     - /data/mindoc/uploads:/mindoc/uploads
+    - /data/mindoc/mindoc.db:/mindoc/mindoc.db
   environment:
     - MINDOC_RUN_MODE=prod
     - MINDOC_DB_ADAPTER=sqlite3
-    - MINDOC_DB_DATABASE=./database/mindoc.db
+    - MINDOC_DB_DATABASE=./mindoc.db
     - MINDOC_CACHE=true
     - MINDOC_CACHE_PROVIDER=file
     - MINDOC_ENABLE_EXPORT=false
