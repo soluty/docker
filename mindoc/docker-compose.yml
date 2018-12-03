@@ -8,11 +8,11 @@ MinDoc_New:
     - /data/mindoc/database:/mindoc/database
     - /data/mindoc/uploads:/mindoc/uploads
   environment:
-    - MINDOC_RUN_MODE=prod
-    - MINDOC_DB_ADAPTER=sqlite3
-    - MINDOC_DB_DATABASE=./database/mindoc.db
-    - MINDOC_CACHE=true
-    - MINDOC_CACHE_PROVIDER=file
+    # - MINDOC_RUN_MODE=prod
+    # - MINDOC_DB_ADAPTER=sqlite3
+    # - MINDOC_DB_DATABASE=./database/mindoc.db
+    - MINDOC_CACHE=false
+    # - MINDOC_CACHE_PROVIDER=file
     - MINDOC_ENABLE_EXPORT=false
     - MINDOC_BASE_URL=http://soluty.xyz
     - MINDOC_CDN_IMG_URL=
